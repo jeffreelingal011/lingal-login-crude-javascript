@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="title">lingal CRUD form</h1>
+
+        <div id="registerForm">
+            <h2>Create an Account</h2>
+            <label for="registerUsername">Username:</label>
+            <input type="text" id="registerUsername" required>
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" required>
+            <button type="button" onclick="register()">Register</button>
+        </div>
+
+        <div id="loginForm" style="display: none;">
+            <h2>Login</h2>
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" required>
+            <button type="button" onclick="login()">Login</button>
+        </div>
+
+        <form id="crudForm" style="display: none;">
+            <h2>Add Item</h2>
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" required>
+            <button type="button" onclick="addItem()">Add Item</button>
+            <button type="button" onclick="logout()">Logout</button>
+        </form>
+
+        <table id="itemTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
